@@ -1,0 +1,48 @@
+{
+  "name": "potluck-party-planner",
+  "version": "0.0.0-dev.0",
+  "description": "A potluck planning software for groups",
+  "main": "index.js",
+  "keywords": [
+    "potluck",
+    "party",
+    "planning",
+    "food",
+    "group"
+  ],
+  "author": "John J. Andrichak IV",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm dist/bundle.js",
+    "lint": "eslint src --ext .ts,.tsx",
+    "start": "parcel src/index.html",
+    "build-prod": "parcel build src/index.html"
+  },
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.22",
+    "@types/react-dom": "^16.8.4",
+    "@typescript-eslint/eslint-plugin": "^1.11.0",
+    "@typescript-eslint/parser": "^1.11.0",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-html": "^6.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.14.2",
+    "eslint-plugin-react-redux": "^3.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "less": "^3.9.0",
+    "parcel-bundler": "^1.12.3",
+    "prettier": "^1.18.2",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.1",
+    "typescript": "^3.5.2"
+  }
+}
