@@ -1,48 +1,81 @@
 {
   "name": "potluck-party-planner",
   "version": "0.0.0-dev.0",
-  "description": "A potluck planning software for groups",
-  "main": "index.js",
-  "keywords": [
-    "potluck",
-    "party",
-    "planning",
-    "food",
-    "group"
-  ],
   "author": "John J. Andrichak IV",
   "license": "MIT",
-  "scripts": {
-    "clean": "rm dist/bundle.js",
-    "lint": "eslint src --ext .ts,.tsx",
-    "start": "parcel src/index.html",
-    "build-prod": "parcel build src/index.html"
-  },
+  "private": true,
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1"
   },
   "devDependencies": {
-    "@types/react": "^16.8.22",
-    "@types/react-dom": "^16.8.4",
+    "@types/jest": "24.0.15",
+    "@types/node": "12.0.10",
+    "@types/react": "16.8.22",
+    "@types/react-dom": "16.8.4",
     "@typescript-eslint/eslint-plugin": "^1.11.0",
     "@typescript-eslint/parser": "^1.11.0",
-    "eslint": "^6.0.1",
-    "eslint-config-prettier": "^6.0.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-html": "^6.0.0",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-node": "^9.1.0",
+    "eslint-config-prettier": "^5.1.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-redux": "^3.0.1",
-    "eslint-plugin-standard": "^4.0.0",
-    "less": "^3.9.0",
-    "parcel-bundler": "^1.12.3",
-    "prettier": "^1.18.2",
-    "react-redux": "^7.1.0",
-    "redux": "^4.0.1",
-    "typescript": "^3.5.2"
+    "prettier": "1.18.2",
+    "react-test-renderer": "^16.8.6",
+    "typescript": "3.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "tsc --noEmit && eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "test": "react-scripts test"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "@typescript-eslint/parser",
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended",
+      "prettier/react"
+    ],
+    "plugins": [
+      "react",
+      "@typescript-eslint",
+      "prettier"
+    ],
+    "env": {
+      "browser": true,
+      "jasmine": true,
+      "jest": true
+    },
+    "rules": {
+      "prettier/prettier": "error"
+    },
+    "settings": {
+      "react": {
+        "pragma": "React",
+        "version": "detect"
+      }
+    }
+  },
+  "prettier": {
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 80,
+    "tabWidth": 2
   }
 }
